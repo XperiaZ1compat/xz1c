@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='utf-8'>
+</head>
+<body>
+<form action='/homework1/servlet/CartServlet?type=edit' method='post'>
+	<table width='500' height='120' border='1'>
+		<tr bgcolor='#FFACAC'>
+			<td><input id='checkboxAll' type='checkbox' onchange='checkAll(this);'></td>
+			<td>商品</td>
+			<td>单价</td>
+			<td>数量</td>
+			<td>小计</td>
+		</tr>
+		<tr bgcolor='#F1FAFA'>
+			<td><input name='checkbox1'  type='checkbox'></td>
+			<td>pear</td>
+			<td>3.5</td>
+			<td><input type='button' value='-' onClick="changeOne('pear',-1)">
+				<input type='text' oldValue='' name='pear' id='pear' onChange='check(this)' onFocus='remember(this)' value='1'>
+				<input type='button' value='+' onClick="changeOne('pear',1)"></td>
+			<td>3.5</td>
+		</tr>
+		<tr bgcolor='#FFACAC'>
+			<td colspan='2'><input type='button' value='删除所选' onClick='deleteCheck()'></td>
+			<td><input type='submit' value='提交'></td>
+			<td align='right'>总计：</td>
+			<td id='total'>3.5</td>
+		</tr>
+	</table>
+</form>
+</body>
+<script type='text/javascript' src='/homework1/js/cartEdit.js'></script>
+</html>
